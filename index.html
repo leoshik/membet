@@ -18,9 +18,7 @@
             <p class="balik">1000</p>
             <button class="dep">пополнить</button>
         </div>
-        <audio autoplay>
-            <source src="audio/casino.mp3" type="audio/mpeg">
-        </audio>
+        <audio id="myAudio" src="casino.mp3"></audio>
     </header>
     <div class="slot_machine one_armed_bandit">
         <div class="slots">
@@ -33,7 +31,6 @@
                 <form id="stavka">
                     <label for="textInput">Ставка:</label><br>
                     <input type="text" id="textInput" name="userInput"><br>
-                    <input type="submit" value="Отправить">
                 </form>
             </div>
             <div>Выигрыш</div>
@@ -49,15 +46,26 @@
             "image5.jpg",
             "image6.jpg"
         ];
+        
+        let balik = +document.querySelector(".balik").innerHTML;
 
         function playSlot() {
+            if(balik == 0 || balik < 100){
+                alert('вы нищий');
+                return;
+            } else {
+                balik += -100;
+                document.querySelector(".balik").innerHTML = balik; 
+            }
             let slots = document.querySelectorAll(".slot");
             slots.forEach(slot => {
                 let randomIndex = Math.floor(Math.random() * images.length);
                 slot.innerHTML = `<img src="${images[randomIndex]}" alt="Image">`;
             });
-            let balik = +document.querySelector(".balik").innerHTML;
+            var audio = document.getElementById("myAudio");
+            audio.play();
         }
-    </script>
+        
+        </script>
 </body>
 </html>
