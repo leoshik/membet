@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(108,4,22);
+    background: linear-gradient(90deg, rgba(108,4,22,1) 0%, rgba(112,41,211,1) 57%, rgba(223,45,45,1) 97%);
+}
+
+header{
+    display: flex;
+    background-color: rgba(222, 7, 255, 0.318);
+    flex-direction: row;
+    width: 100%;
+    height: 6em;
+    justify-content: space-between;
+}
+
+.exit{
+    width:10%;
+}
+
+.exitpng{
+    height: 6em;
+}
+
+.balans{
+    display: flex;
+    width: 20%;
+    align-self: center;
+    color: white;
+    font-size: 2em;
+}
+
+.dep{
+    height: 3em;
+    align-self: center;
+    margin-left: 2em;
+    font-size: 20px;
+}
