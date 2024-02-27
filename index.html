@@ -15,7 +15,7 @@
         </div>
         <h1>Membet</h1>
         <div class="balans">
-            <p class="balik">1000$</p>
+            <p class="balik">1000</p>
             <button class="dep">пополнить</button>
         </div>
         <audio autoplay>
@@ -29,7 +29,13 @@
             <div class="slot"></div>
         </div>
         <div class="menu">
-            <div>Ставка</div>
+            <div>
+                <form id="stavka">
+                    <label for="textInput">Ставка:</label><br>
+                    <input type="text" id="textInput" name="userInput"><br>
+                    <input type="submit" value="Отправить">
+                </form>
+            </div>
             <div>Выигрыш</div>
             <div><button onclick="playSlot()">Играть</button></div>
         </div>
@@ -50,6 +56,7 @@
                 let randomIndex = Math.floor(Math.random() * images.length);
                 slot.innerHTML = `<img src="${images[randomIndex]}" alt="Image">`;
             });
+            let balik = +document.querySelector(".balik").innerHTML;
         }
     </script>
 </body>
