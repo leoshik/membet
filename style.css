@@ -91,6 +91,10 @@ header{
     border: 1px solid black;
 }
 
+.slot img{
+    width: 100%;
+}
+
 .menu{
     padding: 10px;
     display: flex;
