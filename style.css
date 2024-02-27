@@ -7,8 +7,15 @@ body{
     justify-content: center;
     align-items: center;
 }
-.slot1{
+.slot{
+    display: flex;
+    flex-direction:row;
     width:90%;
     height: 70%;
+    border: 2px solid;
+}
+
+.one{
+    width:33.33%;
     border: 2px solid;
 }
